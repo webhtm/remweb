@@ -1,0 +1,60 @@
+
+<style>
+    button {
+        background-color: rgb(36, 145, 140);
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        transition: 0.3s ease-in-out;
+        margin-left: 10px;
+        font-size: medium;
+        
+    }
+    button:hover {
+        background-color: rgb(0, 255, 217);
+        color: #333;
+        cursor: pointer;
+    }
+    input {
+        background-color: black;
+        transition: 0.3s background-color ease;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        border: none;
+        width: 70%;
+        font-size: medium;
+        
+    }
+    input:focus {
+        background-color: #333;
+    }
+    body {
+        background-color: #333;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+  
+</style>
+<title>Remweb Searcher</title>
+<input type="text" id="text" placeholder="Search Remweb..">
+<button onclick="openwin()">Search</button>
+<script>
+    document.getElementById('text').addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    // Do something when Enter is pressed
+    openwin()
+  }
+});
+
+function openwin() {
+    var txtcont = document.getElementById('text').value;
+    var url = `https://webhtm.github.io/${txtcont}/`
+    window.open(url)
+}
+</script>
+
+
